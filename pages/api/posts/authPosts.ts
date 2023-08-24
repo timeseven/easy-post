@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Get Auth Users Posts
     try {
       const result = await prisma.user.findUnique({
-        where: { email: session?.user?.email },
+        where: { email: session?.user?.email || "" },
         include: {
           posts: {
             orderBy: {
