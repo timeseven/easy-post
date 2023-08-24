@@ -25,7 +25,6 @@ export default function PostDetail(url: URL) {
     queryKey: ["detail-post"],
   });
   if (isLoading) return "Loading...";
-  console.log(data);
   return (
     <div>
       {data && (
