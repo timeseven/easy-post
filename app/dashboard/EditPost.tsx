@@ -51,7 +51,7 @@ export default function EditPost({ avatar, name, title, id, comments }: EditPost
         <div className="my-8">
           <p className="break-all">{title}</p>
         </div>
-        <div className="flex gap-4 cursor-pointer items-center">
+        <div className="flex gap-4 items-center">
           <p className="text-sm font-bold text-gray-700">{comments?.length} Comment</p>
           <button
             onClick={() => {

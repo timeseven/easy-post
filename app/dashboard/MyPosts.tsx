@@ -13,7 +13,6 @@ const fetchAuthPosts = async () => {
 export default function MyPosts() {
   const { data, isLoading } = useQuery<AuthPosts>({ queryFn: fetchAuthPosts, queryKey: ["auth-posts"] });
   if (isLoading) return <h1>Posts are loading...</h1>;
-  console.log(data);
   return (
     <div>
       {data?.posts?.map((post) => (
